@@ -1,0 +1,43 @@
+@import url('reset.css');
+
+#outer-wrapper{
+  display:flex;
+  flex-flow:row wrap;
+  width:1280px;
+  height:800px;
+  margin:0 auto;
+  border:1px solid black;
+  justify-content:center;
+}
+
+#vs{
+  width:200px;
+  height:200px;
+  border:1px solid black;
+  padding:10px;
+  margin:210px 20px 0px 20px;
+}
+
+.movie-poster{
+  width:400px;
+  height:600px;
+  border:1px solid black;
+  padding:10px;
+  margin:10px 20px 0px 20px;
+}
+
+#generate-btn{
+  width:200px;
+  height:50px;
+  border-radius:20px;
+  background:linear-gradient(red,black);
+  cursor:pointer;
+  color:white;
+  text-align:center;
+  line-height:50px;
+  font-family:futura;
+  font-size:24px;
+  font-weight:200;
+  text-transform:uppercase;
+  margin:0px 10px 80px 10px;
+}
