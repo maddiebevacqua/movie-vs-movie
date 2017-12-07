@@ -1,32 +1,70 @@
 @import url('reset.css');
 
-#outer-wrapper{
-  display:flex;
+.outer-wrapper{
+  width:100vw;
+  height:100vh;
+  /*display:flex;
   flex-flow:row wrap;
-  width:1280px;
-  height:800px;
   margin:0 auto;
   border:1px solid black;
-  justify-content:center;
+  justify-content:center;*/
+  background-color:green;
 }
 
-#vs{
+.vs{
   width:200px;
   height:200px;
-  border:1px solid black;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin:-80px 0 0 -170px;
+  z-index:100;
+  /*border:1px solid black;
   padding:10px;
-  margin:210px 20px 0px 20px;
+  margin:210px 20px 0px 20px;*/
+  animation-name:rotate;
+  animation-duration:1s;
+  animation-timing-function:ease-in;
+  animation-iteration-count: infinite;
+  
 }
 
-.movie-poster{
-  width:400px;
-  height:600px;
-  border:1px solid black;
-  padding:10px;
-  margin:10px 20px 0px 20px;
+@keyframes rotate {
+  0% {transform: rotate(0deg);}
+  50%{transform: rotate(7deg);}
 }
 
-#generate-btn{
+@keyframes from-left {
+  from{width:0vw}
+  to{width:50vw}
+}
+
+@keyframes from-right {
+  from{width:0vw}
+  to{width:50vw}
+}
+
+.movie-poster-one-bg{
+  width:50vw;
+  height:100vh;
+  background-color:yellow;
+  float:left;
+  animation-name:from-left;
+  animation-duration:1s;
+  animation-timing-function:ease-in;
+}
+
+.movie-poster-two-bg{
+  width:50vw;
+  height:100vh;
+  background-color:blue;
+  float:right;
+  animation-name:from-right;
+  animation-duration:1s;
+  animation-timing-function:ease-in;
+}
+
+/*#generate-btn{
   width:200px;
   height:50px;
   border-radius:20px;
@@ -39,5 +77,5 @@
   font-size:24px;
   font-weight:200;
   text-transform:uppercase;
-  margin:0px 10px 80px 10px;
+  margin:0px 50px 80px 50px;
 }
